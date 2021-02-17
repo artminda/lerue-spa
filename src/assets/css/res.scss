@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%
+}
+
+body {
+    font-family: "Noto Sans SC", Arial, "Microsoft Sans Serif", "Microsoft YaHei UI";
+    color: #666666;
+    background: #fff;
+}
+
+#app {
+    position: relative;
+    min-height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+    letter-spacing:1.5px;
+    word-break: break-all;
+}
+
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+code, kbd, pre, samp {
+    font-family: couriernew, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+
+.bolder {
+   font-weight: bolder;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #000;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+button, input, select, textarea {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+a {
+    font-family: "Noto Sans SC", Arial, "Microsoft Sans Serif", "Microsoft YaHei UI";
+    // -webkit-font-smoothing: antialiased;
+}
+
+div.content {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 500;
+    font-family: "Lato-Light";
+    word-break: break-word;
+    color: #000;
+}
+
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    color: #fff;
+   &-center {
+      justify-content: center;
+      align-items: center;
+   }
+   .text {
+       max-width: 497px;
+       h1 {
+           font-size: 36px;
+           line-height: 1.2;
+           margin-bottom: 10px;
+       }
+       p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 22px;
+       }
+   }
+   img {
+       width: 100%;
+   }
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
