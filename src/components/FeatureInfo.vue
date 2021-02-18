@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 #FeatureInfo {
-   margin-top: 10vh;
+   margin-top: 20vh;
    .card {
     border: none;
     background: transparent;

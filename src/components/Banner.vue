@@ -26,7 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 #banner {
-  margin-top: 15vh;
+  margin-top: 20vh;
   .banner-text {
       font-size: 48px;
       font-weight: 300;

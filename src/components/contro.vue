@@ -2,21 +2,21 @@
   <div class="contro">
     <div class="switch-button" :class="{'scroll-down':homeHeader}">
       <div class="active"
-      :class="{ left: switch_way === 'l', right: switch_way === 'r' }"></div>
+      :class="{ left: switch_way === 'EN', right: switch_way === 'CN' }"></div>
 
-      <button @click="switch_way = 'l'" class="switch-button-case left">
+      <button @click="switchLang('EN')" class="switch-button-case left">
         <div
           class="text"
-          :class="{ white: switch_way === 'l', black: switch_way === 'r' }"
+          :class="{ white: switch_way === 'EN', black: switch_way === 'CN' }"
         >
           EN
         </div>
       </button>
 
-      <button @click="switch_way = 'r'" class="switch-button-case right">
+      <button @click="switchLang('CN')" class="switch-button-case right">
         <div
           class="text"
-          :class="{ black: switch_way === 'l', white: switch_way === 'r' }"
+          :class="{ black: switch_way === 'EN', white: switch_way === 'CN' }"
         >
           CN
         </div>
@@ -27,19 +27,23 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   name: 'contro',
   data () {
     return {
-      switch_way: 'l',
-      OpenIndicator: {
-        render: (createElement) =>
-          createElement('span', { class: { 'drop-background': true } })
-      }
+      switch_way: Cookies.get('language')
     }
   },
   props: {
     homeHeader: Boolean
+  },
+  methods: {
+    switchLang (lang) {
+      this.switch_way = lang
+      this.$i18n.locale = lang
+      Cookies.set('language', lang)
+    }
   }
 }
 </script>

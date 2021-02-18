@@ -2,9 +2,9 @@
   <div class="wrapper">
     <Banner />
     <FeatureInfo />
-    <Feature />
+    <Feature :data="metas.Feature" />
     <Count />
-    <About />
+    <About :data="metas.Feature"/>
     <FeatureList />
     <News />
     <Contact />
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import * as metas from '../libs/metas'
 import Banner from './Banner'
 import FeatureInfo from './FeatureInfo'
 import Feature from './Feature'
@@ -25,6 +26,11 @@ export default {
   name: 'Home',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      metas
+    }
   },
   components: {
     Banner,
