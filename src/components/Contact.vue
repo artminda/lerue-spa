@@ -1,30 +1,90 @@
  <template>
-  <section id="banner" class="container">
-    <div class="row active animated" v-animated="{ className: 'fadeInDown' }">
+  <section id="Contact" class="container">
+    <div class="row active animated " v-animated="{ className: 'fadeInDown' }">
+      <div class="col-xs-12 col-sm-6 form">
+        <h1>Contact us</h1>
+       <form
+        action="https://formspree.io/f/xdopvpeq"
+        method="POST"
+        >
+        <label>
+            <input class="input" type="text" name="name" placeholder="Full Name">
+        </label>
+         <label>
+            <input class="input" type="text" name="email" placeholder="Email Address">
+        </label>
+        <label>
+            <textarea class="input" name="message" placeholder="messages"/>
+        </label>
+        <HrefBtn text="Send"/>
+        </form>
+      </div>
       <div class="col-xs-12 col-sm-6">
-        <div class="text">
-          <h1>
-            We promise to bring the best
-            <span class="bolder">solution</span> for your business.
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
-            turpis nisl.
-          </p>
-        </div>
+           <div class="col-xs-6 t-center">
+               <h1>Company</h1>
+                <h2 href="">Home</h2>
+                <h2 href="">Home</h2>
+                <h2 href="">Home</h2>
+                <h2 href="">Home</h2>
+                <h2 href="">Home</h2>
+           </div>
+           <div class="col-xs-6 t-center">
+               <h1>Services</h1>
+               <h2 href="">Home</h2>
+               <h2 href="">Home</h2>
+           </div>
+           <div class="col-xs-12 col-sm-6 t-center">
+               <h1>Fllow Us</h1>
+               <h2 href="">Home</h2>
+           </div>
+           <div class="col-xs-12 copyright">
+           © 2021. All Rights Reserved. Design by Artminda.
+           </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import HrefBtn from './HrefBtn.vue'
 export default {
-  name: 'Banner'
+  components: { HrefBtn },
+  name: 'Contact'
 }
 </script>
 
 <style lang="scss" scoped>
-#banner {
+#Contact {
     margin-top: 200px;
+    h1 {
+      color: #1d3ede;
+      padding: 1rem 2rem
+      }
+    .form {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       padding: 20px;
+    form {
+        text-align: center;
+        .input {
+            width: 100%;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 50px;
+            max-width: 450px;
+            width: 100%;
+            height: 60px;
+            border: none;
+            margin-bottom: 30px;
+            padding-left: 30px;
+            color: #000;
+        }
+     }
+   }
+   .copyright {
+       position: absolute;
+       bottom: 40px;
+   }
 }
 </style>

@@ -1,6 +1,6 @@
  <template>
-  <section id="banner" class="container">
-    <div class="row active animated" v-animated="{ className: 'fadeInDown' }">
+  <section id="banner" class="container banner">
+    <div class="row active animated " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12 col-sm-6">
         <div class="text">
           <h1 class="banner-text">
@@ -14,6 +14,7 @@
           <HrefBtn text="CONTACT US" />
         </div>
       </div>
+       <div class="col-xs-12 col-sm-6 banner"/>
     </div>
   </section>
 </template>
@@ -31,52 +32,38 @@ export default {
       font-size: 48px;
       font-weight: 300;
   }
-  &::after {
-  position: absolute;
-  content: "";
-  height: 600px;
-  width: 900px;
-  background-image: -webkit-linear-gradient(-220deg, #1d3ede, #01e6f8);
-  background-image: -moz-linear-gradient(-220deg, #1d3ede, #01e6f8);
-  background-image: -ms-linear-gradient(-220deg, #1d3ede, #01e6f8);
-  background-image: -o-linear-gradient(-220deg, #1d3ede, #01e6f8);
-  background-image: linear-gradient(-220deg, #1d3ede, #01e6f8);
-  left: 49.5%;
-  top: -200px;
-  z-index: -1;
-  border-radius: 50% 0 50% 50%;
-  }
-  &::before {
+  .banner {
     position: absolute;
-    content: "";
     height: 590px;
     width: 930px;
-    background-image: -webkit-linear-gradient(to right, #e8eefc, #e6fafe);
-    background-image: -moz-linear-gradient(to right, #e8eefc, #e6fafe);
-    background-image: -ms-linear-gradient(to right, #e8eefc, #e6fafe);
-    background-image: -o-linear-gradient(to right, #e8eefc, #e6fafe);
     background-image: linear-gradient(to right, #e8eefc, #e6fafe);
-    left: 47.5%;
-    top: -150px;
-    z-index: -1;
+    right: -100px;
+    top: -200px;
+    z-index: -4;
     border-radius: 50% 0 50% 50%;
+    overflow: hidden;
+    &::after {
+        position: absolute;
+        content: '';
+        height: 600px;
+        width: 900px;
+        background-image: linear-gradient(-220deg, #1d3ede, #01e6f8);
+        right: 0;
+        top: -30px;
+        z-index: -4;
+        border-radius: 50% 0 50% 50%;
+        overflow: hidden;
+    }
   }
 }
 
 @media (max-width: 768px) {
    #banner {
-       &::after {
-         width: 100%;
-         height: 400px;
-         left: auto;
-         right: 0;
-       }
-       &::before {
+      .banner {
+          display: none;
           width: 100%;
-          height: 390px;
-          left: auto;
-          right: 0;
-       }
+          overflow: hidden;
+      }
    }
 }
 </style>

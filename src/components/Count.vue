@@ -1,8 +1,8 @@
  <template>
-  <section id="Count" class="container">
-    <div class="row active animated" v-animated="{ className: 'fadeInDown' }">
+  <section id="Count" class="container" ref="count" @scroll="handleScroll">
+    <div class="Count row active animated " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12 row-center">
-         <div class="bg">
+         <div class="bg hidden-sm hidden-xs">
            <svg width="100%" viewBox="0 0 1600 400">
             <defs>
                 <linearGradient id="PSgrad_03" x1="80.279%" x2="0%" y2="0%">
@@ -16,17 +16,17 @@
                 <path d="M98.891,386.002 L1527.942,380.805 C1581.806,380.610 1599.093,335.367 1570.005,284.353 L1480.254,126.948 C1458.704,89.153 1408.314,59.820 1366.025,57.550 L298.504,0.261 C238.784,-2.944 166.619,25.419 138.312,70.265 L16.944,262.546 C-24.214,327.750 12.103,386.317 98.891,386.002 Z"></path>
             </clipPath>
 
-            <!-- xlink:href for modern browsers, src for IE8- -->
             <image clip-path="url(#ctm)" xlink:href="../assets/img/word-map.png" height="800px" width="100%" class="svg__image">
             </image>
            </svg>
          </div>
-        <div class="count">
+        <div v-if="fadeInDown" class="count">
           <div v-for="(n , i) in numbers" :key="i" class="c-box">
            <countTo :startVal='startVal' :endVal='n.num' :duration='1500' class="num"/>
            <h3>{{n.des}}</h3>
           </div>
         </div>
+        <div style="clear:both"></div>
       </div>
     </div>
   </section>
@@ -38,6 +38,7 @@ export default {
   name: 'Count',
   data () {
     return {
+      fadeInDown: true,
       startVal: 0,
       numbers: [
         { num: 125, des: 'Active Projects' },
@@ -47,13 +48,30 @@ export default {
       ]
     }
   },
-  components: { countTo }
+  components: { countTo },
+  methods: {
+    handleScroll () {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      console.log(scrollTop)
+      if ((scrollTop >= 1300 && scrollTop <= 1990) || (scrollTop >= 2000 && scrollTop <= 2720)) {
+        this.fadeInDown = true
+      } else {
+        this.fadeInDown = false
+      }
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll, true)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll, true)
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 #Count {
-    margin-top: 20vh;
+    margin-top: 8vh;
     .bg {
         // position: absolute;
         width: 100%;
@@ -78,6 +96,28 @@ export default {
                color: #fff;
            }
       }
+    }
+    @media (max-width: 768px) {
+        .count {
+            top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px 0 ;
+            .c-box {
+                text-align: center;
+                max-width: 50%;
+                padding: 10px 1px;
+            .num {
+                font-size: 38px;
+            }
+            h3 {
+                padding: 0 30px;
+                word-break: break-word;
+              }
+            }
+        }
     }
 }
 </style>

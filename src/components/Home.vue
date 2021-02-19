@@ -5,8 +5,8 @@
     <Feature :data="metas.Feature" />
     <Count />
     <About :data="metas.Feature"/>
-    <FeatureList />
-    <News />
+    <FeatureList :data="metas.Feature"/>
+    <!-- <News /> -->
     <Contact />
   </div>
 </template>
@@ -19,7 +19,7 @@ import Feature from './Feature'
 import Count from './Count'
 import About from './About'
 import FeatureList from './FeatureList'
-import News from './News'
+// import News from './News'
 import Contact from './Contact'
 
 export default {
@@ -39,7 +39,7 @@ export default {
     Count,
     About,
     FeatureList,
-    News,
+    // News,
     Contact
   }
 }

@@ -1,6 +1,6 @@
  <template>
   <section id="FeatureInfo" class="container">
-    <div class="row active animated" v-animated="{ className: 'fadeInDown' }">
+    <div class="row active animated " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12 col-sm-6 card">
       <svg class="back-bg" width="100%" viewBox="0 0 900 700" style="position:absolute; z-index: -1">
             <defs>
@@ -15,7 +15,6 @@
             <clipPath id="clip-path">
                 <path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
             </clipPath>
-            <!-- xlink:href for modern browsers, src for IE8- -->
             <image clip-path="url(#clip-path)" xlink:href="../assets/img/learn-img.jpg" width="100%" height="465" class="svg__image"></image>
         </svg>
       </div>
@@ -46,6 +45,7 @@ export default {
    margin-top: 20vh;
    .card {
     border: none;
+    overflow: hidden;
     background: transparent;
     position: relative;
     display: -ms-flexbox;
@@ -56,6 +56,9 @@ export default {
     word-wrap: break-word;
     background-clip: border-box;
     border-radius: .25rem;
+   }
+   @media screen and (max-width: 768px) {
+       .card {overflow: hidden;}
    }
   .back-bg {
     margin-left: -30px !important;

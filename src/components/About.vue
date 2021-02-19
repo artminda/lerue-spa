@@ -1,8 +1,9 @@
  <template>
   <section id="About" class="container">
-    <h1 class="t-center">What our customers say about us.</h1>
-    <div class="row active animated" v-animated="{ className: 'fadeInDown' }">
+    <!-- <h1 class="row t-center">What our customers say about us.</h1> -->
+    <div class="active animated  " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12">
+          <h1>What our customers say about us.</h1>
         <swiper class="swiper" :options="swiperOption">
         <swiper-slide v-for="(item, i) in meta.card" :key="i" class="card">
             <div class="oval"><img :src="Icons[i]" alt=""></div>
@@ -14,6 +15,7 @@
         <div class="swiper-button-next" slot="button-next"></div> -->
         </swiper>
       </div>
+      <div style="clear:both"></div>
     </div>
   </section>
 </template>
@@ -33,7 +35,7 @@ export default {
         require('../assets/img/graphics-design.png')
       ],
       swiperOption: {
-        slidesPerView: 3,
+        slidesPerView: document.body.clientWidth > 768 ? 3 : 1,
         centeredSlides: true,
         spaceBetween: 40,
         slidesPerGroup: 1,
@@ -64,6 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 #About {
+    position: relative;
     .swiper{
          margin: 0 -15px;
          padding: 30px;

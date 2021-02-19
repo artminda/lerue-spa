@@ -4,8 +4,7 @@
       <div class="container">
         <div class="navbar-header">
           <a to="/" class="navbar-brand">
-            <img src="../assets/img/lerue-logo.png" class="logo hidden-xs" />
-            <img src="../assets/img/lerue-logo.png" class="logo visible-xs" />
+            <img src="../assets/img/lerue-logo.png" class="logo" />
           </a>
           <div class="visible-xs">
           <div @click="flag = !flag" class="menu-wrapper visible-xs">

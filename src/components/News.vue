@@ -1,6 +1,6 @@
  <template>
   <section id="banner" class="container">
-    <div class="row active animated" v-animated="{ className: 'fadeInDown' }">
+    <div class="row active animated " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12 col-sm-6">
         <div class="text">
           <h1>
