@@ -82,7 +82,7 @@ export default {
         position: relative;
         z-index: 99;
         &.black {
-          color: #a1a1a1;
+          color: #222;
         }
         &.white {
           color: #fff;
@@ -90,7 +90,7 @@ export default {
       }
     }
     .active {
-      background-color: #01e6f8;
+      background-color: #222;
       border-radius: 5px;
       position: absolute;
       left: 0;

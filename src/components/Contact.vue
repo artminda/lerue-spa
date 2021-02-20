@@ -32,8 +32,6 @@
                <h1>Services</h1>
                <h2 href="">Home</h2>
                <h2 href="">Home</h2>
-           </div>
-           <div class="col-xs-12 col-sm-6 t-center">
                <h1>Fllow Us</h1>
                <h2 href="">Home</h2>
            </div>
@@ -41,6 +39,7 @@
            © 2021. All Rights Reserved. Design by Artminda.
            </div>
       </div>
+
     </div>
   </section>
 </template>
@@ -55,11 +54,12 @@ export default {
 
 <style lang="scss" scoped>
 #Contact {
-    margin-top: 200px;
+    margin: 100px auto 150px auto;
     h1 {
-      color: #1d3ede;
+      color: #222;
       padding: 1rem 2rem
-      }
+    }
+    h2 { color: #666;}
     .form {
        display: flex;
        flex-wrap: wrap;
@@ -83,8 +83,9 @@ export default {
      }
    }
    .copyright {
-       position: absolute;
-       bottom: 40px;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
    }
 }
 </style>

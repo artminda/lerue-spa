@@ -7,7 +7,7 @@ import HrefBtn from './components/HrefBtn.vue'
 import './assets/css/animate.css'
 import i18n from './lang'
 
-Vue.use(VueScrollTo, { debounce: 600 })
+Vue.use(VueScrollTo, { debounce: 600, offset: -200 })
 Vue.use(animated, VueI18n)
 
 Vue.config.productionTip = false

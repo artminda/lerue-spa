@@ -7,18 +7,18 @@
             <img src="../assets/img/lerue-logo.png" class="logo" />
           </a>
           <div class="visible-xs">
-          <div @click="flag = !flag" class="menu-wrapper visible-xs">
-            <div class="hamburger-menu" :class="{ animate: flag }" />
-          </div>
+            <div @click="flag = !flag" class="menu-wrapper visible-xs">
+                <div class="hamburger-menu" :class="{ animate: flag }" />
+            </div>
           </div>
           <!-- pc -->
           <div class="collapse">
             <ul class="nav items">
-              <a to="/" v-scroll-to="'#tp_banner'"><li @click="toggle">HOME</li></a>
-              <a to="/product"><li>SERVICES</li></a>
-              <a to="/lottery"><li>ABOUT</li></a>
-              <a to="/lottery"><li>NEWS</li></a>
-              <a to="/lottery"><li>CONTACT</li></a>
+              <a v-scroll-to="'#Banner'"><li>HOME</li></a>
+              <a v-scroll-to="'#FeatureInfo'"><li>SERVICES</li></a>
+              <a v-scroll-to="'#About'"><li>ABOUT</li></a>
+              <a v-scroll-to="'#Feature'"><li>NEWS</li></a>
+              <a v-scroll-to="'#Contact'"><li>CONTACT</li></a>
             </ul>
           </div>
         </div>
@@ -28,14 +28,12 @@
         <!-- mobile -->
         <div class="collapse navbar-collapse" v-show="flag">
           <ul class="nav" :class="{ 'navbar-nav': homeHeader }">
-            <a to="/" v-scroll-to="'#tp_banner'"
-              ><li @click="toggle">HOME</li></a
-            >
-            <a to="/product"><li>SERVICES</li></a>
-            <a to="/lottery"><li>ABOUT</li></a>
-            <a to="/lottery"><li>NEWS</li></a>
-            <a to="/lottery"><li>CONTACT</li></a>
-            <switchBtn :homeHeader="homeHeader" />
+            <a v-scroll-to="'#Banner'"><li @click="toggle">HOME</li></a>
+            <a v-scroll-to="'#FeatureInfo'"><li @click="toggle">SERVICES</li></a>
+            <a v-scroll-to="'#About'"><li @click="toggle">ABOUT</li></a>
+            <a v-scroll-to="'#Feature'"><li @click="toggle">NEWS</li></a>
+            <a v-scroll-to="'#Contact'"><li @click="toggle">CONTACT</li></a>
+            <switchBtn class="mt" :homeHeader="homeHeader" />
           </ul>
         </div>
       </div>
@@ -67,6 +65,7 @@ export default {
   },
   methods: {
     toggle () {
+      console.log(this.flag)
       this.flag = this.flag === false
     },
     getPath () {
@@ -90,6 +89,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "@/assets/css/menuBtn.scss";
+
+$blue-bg: linear-gradient(-220deg, #1d3ede, #01e6f8);
+$black-bg: linear-gradient(-220deg, #3c3c3c, #c0c4cb);
+
 .header {
   position: fixed;
   top: 0;
@@ -97,9 +100,10 @@ export default {
   right: 0;
   z-index: 10;
   .nav a {
-    color: #fff;
+    color: #222;
     background: none;
     display: flex;
+    cursor:pointer;
     li {
       position: relative;
       &:hover {
@@ -137,7 +141,7 @@ export default {
       }
     }
     .a-exact-active {
-      background: url(../assets/img/freeze/select01.png) no-repeat center 68%;
+      background: url(../assets/img/freeze/select01.png) no-repeat center 80%;
     }
     .a-exact-active.no-act {
       background: none;
@@ -174,21 +178,17 @@ export default {
   // padding-bottom: 20px;
   transition: all 0.25s ease-in-out;
 
-  .nav a {
-    color: #787878;
-  }
-
   .logo {
     max-width: 180px;
   }
 }
 .header .navbar-default.scrolled {
-  background-image: linear-gradient(-220deg, #1d3ede, #01e6f8);
+  background-image: $black-bg;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   padding: 0;
   border-bottom: 3px solid #b47f41;
   .nav a {
-    // color: #333;
+    color: #fff;
     li {
       &:hover {
         &:after {
@@ -238,10 +238,11 @@ export default {
     }
     .navbar-collapse {
       display: block;
-      background-image: linear-gradient(-220deg, #1d3ede, #01e6f8);
+      background: #fff;
       border-top: 1px solid #e7e7e7;
       margin-right: -15px;
       margin-left: -15px;
+      .mt{margin-top: 20px;}
       .nav {
         display: flex;
         flex-direction: column;
@@ -254,6 +255,7 @@ export default {
         li {
           font-size: 14px;
           line-height: 54px;
+          padding: 10px 0;
           &:hover {
             &:after {
               content: "";

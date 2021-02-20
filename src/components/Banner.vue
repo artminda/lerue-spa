@@ -1,5 +1,5 @@
  <template>
-  <section id="banner" class="container banner">
+  <section id="Banner" class="container banner">
     <div class="row active animated " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12 col-sm-6">
         <div class="text">
@@ -26,7 +26,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#banner {
+$blue-banner-bc-front: linear-gradient(-220deg, #1d3ede, #01e6f8);
+$blue-banner-bc-back: linear-gradient(to right, #e8eefc, #e6fafe);
+$black-banner-bc-front: linear-gradient(-220deg, #292929, #d3d3d3);
+$black-banner-bc-back: linear-gradient(to right, #fbfbfc, #a5a5a5);
+
+#Banner {
   margin-top: 20vh;
   .banner-text {
       font-size: 48px;
@@ -35,8 +40,8 @@ export default {
   .banner {
     position: absolute;
     height: 590px;
-    width: 930px;
-    background-image: linear-gradient(to right, #e8eefc, #e6fafe);
+    width: 730px;
+    background-image: $black-banner-bc-back;
     right: -100px;
     top: -200px;
     z-index: -4;
@@ -46,8 +51,8 @@ export default {
         position: absolute;
         content: '';
         height: 600px;
-        width: 900px;
-        background-image: linear-gradient(-220deg, #1d3ede, #01e6f8);
+        width: 700px;
+        background: $black-banner-bc-front;
         right: 0;
         top: -30px;
         z-index: -4;
@@ -58,11 +63,12 @@ export default {
 }
 
 @media (max-width: 768px) {
-   #banner {
+   #Banner {
+       overflow: hidden;
       .banner {
-          display: none;
           width: 100%;
-          overflow: hidden;
+          right: 0;
+          top: 0px;
       }
    }
 }

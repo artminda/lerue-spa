@@ -12,9 +12,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ $blue-bc: linear-gradient(to right, #06c6f9 , #38eaf9);
+ $black-bc: linear-gradient(to right, #1c1c1c , #a0a2ab);
+
 .b-btn {
     cursor: pointer;
-    background-image: linear-gradient(to right, #06c6f9 , #38eaf9);
+    background: $black-bc;
     font-size: 18px;
     font-family: "OpenSans-Semibold";
     color: #fff;
@@ -33,7 +36,7 @@ export default {
     border-radius: 50%;
     height: 32px;
     width: 32px;
-    color: #37eaf9;
+    color: #666;
     font-size: 22px;
     text-align: center;
     margin-left: 15px;

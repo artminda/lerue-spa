@@ -21,6 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-    @import "assets/css/res.scss";
-    @import "assets/css/grid.css"
+    @import "./assets/css/res.scss";
+    @import "./assets/css/grid.css";
 </style>

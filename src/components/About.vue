@@ -1,19 +1,20 @@
  <template>
   <section id="About" class="container">
-    <!-- <h1 class="row t-center">What our customers say about us.</h1> -->
     <div class="active animated  " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12">
-          <h1>What our customers say about us.</h1>
-        <swiper class="swiper" :options="swiperOption">
-        <swiper-slide v-for="(item, i) in meta.card" :key="i" class="card">
-            <div class="oval"><img :src="Icons[i]" alt=""></div>
-            <h1>{{item.title}}</h1>
-            <p>{{item.des}}</p>
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div> -->
-        </swiper>
+          <h1 class="t-center">What our customers say about us.</h1>
+          <div :key="swiperOption.slidesPerView">
+            <swiper class="swiper" :options="swiperOption">
+            <swiper-slide v-for="(item, i) in meta.card" :key="i" class="card">
+                <div class="oval"><img :src="Icons[i]" alt=""></div>
+                <h1>{{item.title}}</h1>
+                <p>{{item.des}}</p>
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+            <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div> -->
+            </swiper>
+        </div>
       </div>
       <div style="clear:both"></div>
     </div>
@@ -35,7 +36,7 @@ export default {
         require('../assets/img/graphics-design.png')
       ],
       swiperOption: {
-        slidesPerView: document.body.clientWidth > 768 ? 3 : 1,
+        slidesPerView: 3,
         centeredSlides: true,
         spaceBetween: 40,
         slidesPerGroup: 1,
@@ -49,7 +50,8 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
         }
-      }
+      },
+      windowWidth: 0
     }
   },
   components: {
@@ -60,6 +62,21 @@ export default {
     meta () {
       return this.$t('Feature')
     }
+    // autoCol () {
+    //   return this.windowWidth > 768 ? 3 : 1
+    // }
+  },
+  methods: {
+    handleResize () {
+      this.swiperOption.slidesPerView = window.innerWidth > 768 ? 3 : 1
+    }
+  },
+  created () {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
   }
 }
 </script>
