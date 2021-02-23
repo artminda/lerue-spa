@@ -3,7 +3,7 @@
     <nav class="navbar navbar-default" :class="{ scrolled: homeHeader }">
       <div class="container">
         <div class="navbar-header">
-          <a to="/" class="navbar-brand">
+          <a v-scroll-to="'#Banner'">
             <img src="../assets/img/lerue-logo.png" class="logo" />
           </a>
           <div class="visible-xs">
@@ -15,9 +15,9 @@
           <div class="collapse">
             <ul class="nav items">
               <a v-scroll-to="'#Banner'"><li>HOME</li></a>
-              <a v-scroll-to="'#FeatureInfo'"><li>SERVICES</li></a>
-              <a v-scroll-to="'#About'"><li>ABOUT</li></a>
               <a v-scroll-to="'#Feature'"><li>NEWS</li></a>
+              <a v-scroll-to="'#Count'"><li>SERVICES</li></a>
+              <a v-scroll-to="'#FeatureList'"><li>ABOUT</li></a>
               <a v-scroll-to="'#Contact'"><li>CONTACT</li></a>
             </ul>
           </div>
@@ -29,11 +29,11 @@
         <div class="collapse navbar-collapse" v-show="flag">
           <ul class="nav" :class="{ 'navbar-nav': homeHeader }">
             <a v-scroll-to="'#Banner'"><li @click="toggle">HOME</li></a>
-            <a v-scroll-to="'#FeatureInfo'"><li @click="toggle">SERVICES</li></a>
-            <a v-scroll-to="'#About'"><li @click="toggle">ABOUT</li></a>
-            <a v-scroll-to="'#Feature'"><li @click="toggle">NEWS</li></a>
+            <a v-scroll-to="'#Feature'"><li @click="toggle">SERVICES</li></a>
+            <a v-scroll-to="'#Count'"><li @click="toggle">ABOUT</li></a>
+            <a v-scroll-to="'#FeatureList'"><li @click="toggle">NEWS</li></a>
             <a v-scroll-to="'#Contact'"><li @click="toggle">CONTACT</li></a>
-            <switchBtn class="mt" :homeHeader="homeHeader" />
+            <switchBtn class="mt" :homeHeader="homeHeader" @toggle="toggle" />
           </ul>
         </div>
       </div>
@@ -186,7 +186,7 @@ $black-bg: linear-gradient(-220deg, #3c3c3c, #c0c4cb);
   background-image: $black-bg;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   padding: 0;
-  border-bottom: 3px solid #b47f41;
+  border-bottom: 3px solid #222;
   .nav a {
     color: #fff;
     li {
@@ -242,7 +242,9 @@ $black-bg: linear-gradient(-220deg, #3c3c3c, #c0c4cb);
       border-top: 1px solid #e7e7e7;
       margin-right: -15px;
       margin-left: -15px;
-      .mt{margin-top: 20px;}
+      .mt{
+        margin-top: 20px;
+        }
       .nav {
         display: flex;
         flex-direction: column;

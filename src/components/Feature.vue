@@ -1,19 +1,19 @@
  <template>
   <section id="Feature">
     <div class="container row row-center active animated " v-animated="{ className: 'fadeInDown' }">
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-5">
         <div class="text">
           <h1>{{meta.title}}</h1>
           <p>{{meta.des}}</p>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-8">
+      <div class="col-xs-12 col-sm-7">
           <div class="bg">
               <svg id="bg-services" width="100%" viewBox="0 0 1000 800">
                     <defs>
                         <linearGradient id="PSgrad_02" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
-                            <stop offset="0%" stop-color="rgb(1,230,248)" stop-opacity="1"></stop>
-                            <stop offset="100%" stop-color="rgb(29,62,222)" stop-opacity="1"></stop>
+                            <stop offset="0%" stop-color="rgba(45,45,45,1)" stop-opacity="1"></stop>
+                            <stop offset="100%" stop-color="rgba(193,193,193,1)" stop-opacity="1"></stop>
                         </linearGradient>
                     </defs>
                     <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_02)" d="M801.878,3.146 L116.381,128.537 C26.052,145.060 -21.235,229.535 9.856,312.073 L159.806,710.157 C184.515,775.753 264.901,810.334 338.020,792.380 L907.021,652.668 C972.912,636.489 1019.383,573.766 1011.301,510.470 L962.013,124.412 C951.950,45.594 881.254,-11.373 801.878,3.146 Z"></path>
@@ -57,6 +57,7 @@ export default {
     margin-top: 200px;
     .card {
         display: flex;
+        min-height: 300px;
         flex-direction: column;
         background: #fff;
         margin: 12px;
@@ -64,30 +65,26 @@ export default {
         border-radius: 20px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
        .oval {
+            display: flex;
             align-items: center;
             justify-content: center;
-            display: flex;
             background: linear-gradient(to right, #f1f6fd, #f0fbfe);
             padding: 10px;
             width: 150px;
             border-radius: 50%;
             margin: auto;
             transform: rotate(20deg);
-            margin-top: 20px;
                 img {
                     width: 100%;
                     max-width: 0.8in;
-                    margin: 0 auto;
+                    // margin: auto;
                     transform: rotate(-20deg);
                 }
             }
         h1{
             font-size: 24px;
             color: #1d3ede;
-            padding: .5rem 1.25rem;
-        }
-        p {
-            padding: .3rem 1.25rem;
+            padding: 5px 0px;
         }
     }
     .top { top: 7vh;}
@@ -97,9 +94,19 @@ export default {
         width: 100%;
         z-index: -1;
     }
-    @media (max-width: 768px) {
-        .card {margin: 10px 0;}
-        .top { top: 0;}
-    }
 }
+    @media (max-width: 768px) {
+        #Feature {
+            margin-top: 0px;
+            .card {
+                // color: #222s;
+                background:#fff;
+                margin: 10px 0;
+                padding: 25px;
+               h1 {color:#222}
+               p {color: #222;}
+             }
+             .top { top: 0;}
+        }
+    }
 </style>

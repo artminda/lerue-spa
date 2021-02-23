@@ -57,9 +57,6 @@ export default {
     background-clip: border-box;
     border-radius: .25rem;
    }
-   @media screen and (max-width: 768px) {
-       .card {overflow: hidden;}
-   }
   .back-bg {
     margin-left: -30px !important;
     margin-top: -20px;
@@ -70,4 +67,8 @@ export default {
     margin-right: auto;
   }
 }
+   @media screen and (max-width: 768px) {
+       #FeatureInfo {margin-top: 10vh;}
+       .card {overflow: hidden;}
+   }
 </style>

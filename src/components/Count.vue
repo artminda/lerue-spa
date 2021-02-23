@@ -52,7 +52,8 @@ export default {
   methods: {
     handleScroll () {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-      if ((scrollTop >= 1300 && scrollTop <= 1990) || (scrollTop >= 2000 && scrollTop <= 3000)) {
+      //   pc scroll hight || mobile scroll hight
+      if ((scrollTop >= 620 && scrollTop <= 1700) || (scrollTop >= 1716 && scrollTop <= 2750)) {
         this.fadeInDown = true
       } else {
         this.fadeInDown = false
@@ -96,7 +97,10 @@ export default {
            }
       }
     }
+}
     @media (max-width: 768px) {
+       #Count{
+           margin: 63px 0;
         .count {
             top: 0;
             display: flex;

@@ -1,12 +1,11 @@
 <template>
   <div class="wrapper">
     <Banner />
-    <FeatureInfo />
-    <Feature :data="metas.Feature" />
+    <!-- <FeatureInfo /> -->
+    <Feature />
     <Count />
-    <About :data="metas.Feature"/>
-    <FeatureList :data="metas.Feature"/>
-    <!-- <News /> -->
+    <!-- <About /> -->
+    <FeatureList />
     <Contact />
   </div>
 </template>
@@ -14,12 +13,11 @@
 <script>
 import * as metas from '../libs/metas'
 import Banner from './Banner'
-import FeatureInfo from './FeatureInfo'
+// import FeatureInfo from './FeatureInfo'
 import Feature from './Feature'
 import Count from './Count'
-import About from './About'
+// import About from './About'
 import FeatureList from './FeatureList'
-// import News from './News'
 import Contact from './Contact'
 
 export default {
@@ -34,10 +32,10 @@ export default {
   },
   components: {
     Banner,
-    FeatureInfo,
+    // FeatureInfo,
     Feature,
     Count,
-    About,
+    // Abosut,
     FeatureList,
     // News,
     Contact

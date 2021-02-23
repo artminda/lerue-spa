@@ -56,7 +56,6 @@ export default {
 #Contact {
     margin: 100px auto 150px auto;
     h1 {
-      color: #222;
       padding: 1rem 2rem
     }
     h2 { color: #666;}

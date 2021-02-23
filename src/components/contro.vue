@@ -42,6 +42,7 @@ export default {
     switchLang (lang) {
       this.switch_way = lang
       this.$i18n.locale = lang
+      this.$emit('toggle')
       Cookies.set('language', lang)
     }
   }
@@ -139,8 +140,8 @@ export default {
     }
     .switch-button {
       width: 100%;
-      height: 38px;
-
+      height: 55px;
+      border: 2px solid #ccc ;
       &-case {
         .text {
           font-size: 14px;
