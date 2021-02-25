@@ -1,12 +1,13 @@
 <template>
-    <div class="b-btn">{{text}} <span class="i">></span></div>
+     <a :href="herf"><div class="b-btn">{{text}} <span class="i">></span></div></a>
 </template>
 
 <script>
 export default {
   name: 'HrefBtn',
   props: {
-    text: String
+    text: String,
+    herf: String
   }
 }
 </script>

@@ -21,7 +21,7 @@
            </svg>
          </div>
         <div v-if="fadeInDown" class="count">
-          <div v-for="(n , i) in numbers" :key="i" class="c-box">
+          <div v-for="(n , i) in meta.numbers" :key="i" class="c-box">
            <countTo :startVal='startVal' :endVal='n.num' :duration='1500' class="num"/>
            <h3>{{n.des}}</h3>
           </div>
@@ -53,11 +53,17 @@ export default {
     handleScroll () {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       //   pc scroll hight || mobile scroll hight
-      if ((scrollTop >= 620 && scrollTop <= 1700) || (scrollTop >= 1716 && scrollTop <= 2750)) {
+      console.log(scrollTop)
+      if ((scrollTop >= 1068 && scrollTop <= 2518) || (scrollTop >= 2432 && scrollTop <= 3399)) {
         this.fadeInDown = true
       } else {
         this.fadeInDown = false
       }
+    }
+  },
+  computed: {
+    meta () {
+      return this.$t('Count')
     }
   },
   mounted () {

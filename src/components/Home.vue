@@ -3,8 +3,9 @@
     <Banner />
     <!-- <FeatureInfo /> -->
     <Feature />
+    <Security />
     <Count />
-    <!-- <About /> -->
+    <News />
     <FeatureList />
     <Contact />
   </div>
@@ -15,8 +16,10 @@ import * as metas from '../libs/metas'
 import Banner from './Banner'
 // import FeatureInfo from './FeatureInfo'
 import Feature from './Feature'
+import Security from './Security'
 import Count from './Count'
 // import About from './About'
+import News from './News'
 import FeatureList from './FeatureList'
 import Contact from './Contact'
 
@@ -32,12 +35,13 @@ export default {
   },
   components: {
     Banner,
+    Security,
     // FeatureInfo,
     Feature,
     Count,
-    // Abosut,
+    // About,
     FeatureList,
-    // News,
+    News,
     Contact
   }
 }

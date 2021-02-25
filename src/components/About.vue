@@ -123,7 +123,7 @@ export default {
             }
         h1{
             font-size: 24px;
-            color: #1d3ede;
+            color: #222;
             padding: .5rem 1.25rem;
         }
         p {

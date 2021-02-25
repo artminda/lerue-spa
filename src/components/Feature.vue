@@ -83,7 +83,7 @@ export default {
             }
         h1{
             font-size: 24px;
-            color: #1d3ede;
+            color: #222;
             padding: 5px 0px;
         }
     }
