@@ -99,7 +99,6 @@ export default {
             color: #222;
           }
           & .border {
-            font-family: "Lato-Medium";
             font-weight: 800;
           }
           p {

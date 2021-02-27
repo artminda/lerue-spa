@@ -12,6 +12,13 @@
           </p>
         </div>
       </div>
+      <div class="row">
+        <div class="logoBox">
+            <div v-for="(logo, indexOfLogos) in logos" :key="indexOfLogos" class="col-xs-6 col-sm-2">
+              <img  :src="logo" alt="">
+            </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -28,6 +35,13 @@ export default {
         require('../assets/img/graphics-design.png'),
         require('../assets/img/marketing.png'),
         require('../assets/img/seo.png')
+      ],
+      logos: [
+        require('../assets/img/logo1.jpg'),
+        require('../assets/img/logo2.jpg'),
+        require('../assets/img/logo3.jpg'),
+        require('../assets/img/logo4.jpg'),
+        require('../assets/img/logo5.jpg')
       ]
     }
   },
@@ -53,6 +67,25 @@ export default {
     .card {
         display: flex;
         padding: 20px;
+    }
+    .logoBox {
+        // background-color: #fff;
+        padding: 10px;
+        min-height: 65px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        overflow: hidden;
+        justify-content: space-between;
+        img {
+           filter: grayscale(100%);
+        }
+    }
+}
+@media (max-width:768px) {
+    #FeatureList .logoBox {
+        margin-top: 40px;
+        background-color: #777;
     }
 }
 </style>

@@ -14,11 +14,11 @@
           <!-- pc -->
           <div class="collapse">
             <ul class="nav items">
-              <a v-scroll-to="'#Banner'"><li>HOME</li></a>
-              <a v-scroll-to="'#Feature'"><li>NEWS</li></a>
-              <a v-scroll-to="'#Count'"><li>SERVICES</li></a>
-              <a v-scroll-to="'#FeatureList'"><li>ABOUT</li></a>
-              <a v-scroll-to="'#Contact'"><li>CONTACT</li></a>
+              <a v-scroll-to="'#Feature'"><li>{{meta[0]}}</li></a>
+              <a v-scroll-to="'#Security'"><li>{{meta[1]}}</li></a>
+              <a v-scroll-to="'#Count'"><li>{{meta[2]}}</li></a>
+              <a v-scroll-to="'#News'"><li>{{meta[3]}}</li></a>
+              <a v-scroll-to="'#Contact'"><li>{{meta[4]}}</li></a>
             </ul>
           </div>
         </div>
@@ -28,11 +28,11 @@
         <!-- mobile -->
         <div class="collapse navbar-collapse" v-show="flag">
           <ul class="nav" :class="{ 'navbar-nav': homeHeader }">
-            <a v-scroll-to="'#Banner'"><li @click="toggle">HOME</li></a>
-            <a v-scroll-to="'#Feature'"><li @click="toggle">SERVICES</li></a>
-            <a v-scroll-to="'#Count'"><li @click="toggle">ABOUT</li></a>
-            <a v-scroll-to="'#FeatureList'"><li @click="toggle">NEWS</li></a>
-            <a v-scroll-to="'#Contact'"><li @click="toggle">CONTACT</li></a>
+            <a v-scroll-to="'#Feature'"><li @click="toggle">{{meta[0]}}</li></a>
+            <a v-scroll-to="'#Security'"><li @click="toggle">{{meta[1]}}</li></a>
+            <a v-scroll-to="'#Count'"><li @click="toggle">{{meta[2]}}</li></a>
+            <a v-scroll-to="'#News'"><li @click="toggle">{{meta[3]}}</li></a>
+            <a v-scroll-to="'#Contact'"><li @click="toggle">{{meta[4]}}</li></a>
             <switchBtn class="mt" :homeHeader="homeHeader" @toggle="toggle" />
           </ul>
         </div>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import switchBtn from './contro'
+import switchBtn from './Contro'
 
 export default {
   name: 'Header',
@@ -60,8 +60,10 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  watch: {
-    $route: 'getPath'
+  computed: {
+    meta () {
+      return this.$t('Header')
+    }
   },
   methods: {
     toggle () {

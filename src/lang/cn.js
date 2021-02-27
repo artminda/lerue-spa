@@ -1,4 +1,7 @@
 export default {
+  Header: [
+    '服務項目', '安全性', '優點', '產品服務', '聯絡我們'
+  ],
   Banner: {
     title: '我們有最好的人工智能解決方案',
     des: '樂宇是一家以研發為核心的公司，專注在流程自動化(RPA) ，使用機器人自動執行重複性任務與端對端業務流程，以提高生產力、消除錯誤和節省成本'
@@ -17,12 +20,12 @@ export default {
     title: '探索我們提供給你的服務',
     des: 'Nunc sodales lobortis arcu, sit amet venenatis erat placerat a. Donec lacinia magna nulla, cursus impediet augue egestas id. Suspendisse dolor lectus, pellentesque quis tincidunt ac, dictum id neque.',
     card: [
-      { title: '網站設計', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: '市場分析', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: 'SEO', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: '圖像設計', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: '網站設計', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: '市場分析', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi egetNullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' }
+      { title: '高品質', des: '高品質的自動化，不必犧牲服務可靠性就能翻新舊版應用程式，打造生命週期更迅速且無營運負擔的雲端原生應用程' },
+      { title: '分析', des: '我們擁有專業的資料專家，將您資料轉化為可行深入分析資料，為你訓練出屬於自己的人工智慧，掌握市場新契機' },
+      { title: '實惠', des: '依企業需求，我們結合了各種技術，為行動應用程式、熱門訊息傳遞平台和 IoT 裝置打造對話式介面，為您打造出屬於您最經濟實惠的系統架構' },
+      { title: '使用簡單', des: '更貼近使用者，提升企業生產力和協作能力的大好機會，讓員工輕鬆完成工作且事半功倍' },
+      { title: '免費諮詢', des: '無論是與高階主管一同規劃策略，還是工程師對工程師的支援服務，樂宇諮詢顧問和客戶技術工程師都可配合您的需求，協助您制定策略並幫助您達成目標' },
+      { title: '有效兼容', des: '舊版系統複雜且兼容困難，我們會即時進行整合。我們不希望客戶體驗受限於特定通路' }
     ]
   },
   Security: {

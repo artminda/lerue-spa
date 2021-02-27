@@ -9,7 +9,7 @@ html, body{
 }
 
 body {
-    font-family: "Noto Sans SC", Arial, "Microsoft Sans Serif", "Microsoft YaHei UI";
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
     color: #666666;
     background: #fff;
 }
@@ -23,7 +23,7 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
     margin: 0;
     padding: 0;
     letter-spacing:1.5px;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 address, cite, dfn, em, var {
@@ -84,12 +84,6 @@ table {
     border-spacing: 0;
 }
 
-
-a {
-    font-family: "Noto Sans SC", Arial, "Microsoft Sans Serif", "Microsoft YaHei UI";
-    // -webkit-font-smoothing: antialiased;
-}
-
 div.content {
     overflow: hidden;
 }
@@ -111,7 +105,6 @@ h6,
 .h5,
 .h6 {
     font-weight: 500;
-    font-family: "Lato-Light";
     word-break: break-word;
     color: #000;
 }

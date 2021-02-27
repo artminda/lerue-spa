@@ -1,4 +1,7 @@
 export default {
+  Header: [
+    'SERVICES', 'SECURITY', 'ADVANTAGE', 'PRODUCT', 'CONTACT'
+  ],
   Banner: {
     title: 'We have the best artificial intelligence solutions',
     des: 'LEYU is an R&D-focused company, specializing in process automation (RPA), using robots to automate repetitive tasks and end-to-end business processes to increase productivity, eliminate errors and save costs'
@@ -17,12 +20,12 @@ export default {
     title: 'Explore The Services We Offer For You',
     des: 'Nunc sodales lobortis arcu, sit amet venenatis erat placerat a. Donec lacinia magna nulla, cursus impediet augue egestas id. Suspendisse dolor lectus, pellentesque quis tincidunt ac, dictum id neque.',
     card: [
-      { title: 'Web design', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: 'Web design', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: 'Web design', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: 'Web design', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: 'Web design', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' },
-      { title: 'Web design', des: 'Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget Nullam quis libero in lorem accumsan sodales. Nam vel nisi eget.' }
+      { title: 'High Quality Automation', des: 'High-quality automation to refurbish legacy applications without sacrificing service reliability, creating cloud-native applications with faster lifecycles and no operational burden' },
+      { title: 'Analytics', des: 'We have professional data experts to turn your data into feasible in-depth analysis data, so that you can train your own artificial intelligence to grasp new market opportunities' },
+      { title: 'affordable pricing', des: 'Depending on the needs of your business, we combine technologies to create conversational interfaces for mobile applications, hot messaging platforms and IoT devices to create the most cost effective system architecture for you' },
+      { title: 'easy to use', des: 'This is a great opportunity to get closer to the users and improve the productivity and collaboration of the company, so that employees can do their jobs easily.' },
+      { title: 'Free support', des: 'Whether it has planning a strategy with a senior executive or engineer-to-engineer support services, Leyu consultants and customer technical engineers can work with your needs to help you develop a strategy and help you achieve your goals' },
+      { title: 'Web design', des: 'The old system was complex and difficult to integrate, and we will do so immediately. We do not want our customers experience to be limited to specific channels.' }
     ]
   },
   Security: {

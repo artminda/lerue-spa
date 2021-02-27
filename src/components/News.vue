@@ -39,7 +39,7 @@ export default {
         require('../assets/img/news1.jpg'),
         require('../assets/img/news2.jpg'),
         require('../assets/img/news3.jpg'),
-        require('../assets/img/news1.jpg')
+        require('../assets/img/news4.jpg')
       ],
       swiperOption: {
         slidesPerView: 3,
@@ -68,9 +68,6 @@ export default {
     meta () {
       return this.$t('News')
     }
-    // autoCol () {
-    //   return this.windowWidth > 768 ? 3 : 1
-    // }
   },
   methods: {
     handleResize () {
@@ -142,6 +139,21 @@ export default {
             padding: .3rem 1.25rem;
         }
     }
+    }
+}
+@media (max-width:768px) {
+    #News .swiper {
+            .swiper-button-prev, .swiper-button-next {color: #fff;}
+        .card {
+            margin-top: 40px;
+            background-color: rgba(119, 119, 119, 0.454);
+        h1 { color: #fff; }
+        .absolute-bottom {
+            margin: 0 auto;
+            // position: relative;
+            bottom: 10px
+        }
+        }
     }
 }
 </style>

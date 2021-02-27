@@ -20,7 +20,6 @@ export default {
     cursor: pointer;
     background: $black-bc;
     font-size: 18px;
-    font-family: "OpenSans-Semibold";
     color: #fff;
     border-radius: 50px;
     padding: 5px 30px;

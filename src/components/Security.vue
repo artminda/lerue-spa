@@ -43,7 +43,7 @@ export default {
         margin: 40px;
     }
     .imgs{
-        // width: 70%;
+        // filter: grayscale(100%);
         padding: 20px 40px;
     }
 }
@@ -52,13 +52,14 @@ export default {
         margin-top: 40px;
     .security-card {
         padding: 0;
-        height: 190px;
+        margin: 20px 0;
+        min-height: 190px;
         .imgs{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 90%;
-            height: 125px;
+            min-height: 151px;
             padding: 2px 40px;
         }
      }

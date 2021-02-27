@@ -53,8 +53,8 @@ export default {
     handleScroll () {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       //   pc scroll hight || mobile scroll hight
-      console.log(scrollTop)
-      if ((scrollTop >= 1068 && scrollTop <= 2518) || (scrollTop >= 2432 && scrollTop <= 3399)) {
+      //   console.log(scrollTop)
+      if ((scrollTop >= 1068 && scrollTop <= 2518) || (scrollTop >= 2581 && scrollTop <= 3399)) {
         this.fadeInDown = true
       } else {
         this.fadeInDown = false
