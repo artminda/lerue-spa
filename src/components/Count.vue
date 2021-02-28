@@ -55,8 +55,8 @@ export default {
     handleScroll () {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       //   pc scroll hight || mobile scroll hight
-      //   console.log(scrollTop)
-      if ((scrollTop >= 1024 && scrollTop <= 2585) || (scrollTop >= 2431 && scrollTop <= 3541)) {
+      console.log(scrollTop)
+      if ((scrollTop >= 1024 && scrollTop <= 2585) || (scrollTop >= 3000 && scrollTop <= 4000)) {
         this.fadeInDown = true
       } else {
         this.fadeInDown = false
@@ -114,7 +114,7 @@ export default {
        #Count{
            margin: 63px 0;
        .count-box {
-           height: 222px;
+           min-height: 222px;
            background-color: #222;
             .count {
                 top: 0;
