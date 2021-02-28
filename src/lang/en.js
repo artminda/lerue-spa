@@ -55,5 +55,6 @@ export default {
       { title: 'Ai Data Collection', des: 'Capture on-screen messages from the machine and turn them into editable and searchable data. Flexible hybrid cloud configuration, use as much or as little as you want. Monitor multiple devices simultaneously to dramatically increase productivity.', url: 'http://leyutechs.com/doc/space-ocr.pdf' },
       { title: 'Ai Data Collection', des: 'Software connectivity to existing services of customers, integration of all services in one control platform to achieve scale management.', desList: ['Cell phone', 'Website', 'Line', 'Drones'], url: 'http://leyutechs.com/doc/connect.pdf' }
     ]
-  }
+  },
+  thx: 'Thank you for your reply.'
 }

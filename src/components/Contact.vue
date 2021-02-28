@@ -3,20 +3,17 @@
     <div class="row active animated " v-animated="{ className: 'fadeInDown' }">
       <div class="col-xs-12 col-sm-6 form">
         <h1>Contact us</h1>
-       <form
-        action="https://formspree.io/f/mqkgonnp"
-        method="POST"
-        >
+       <form>
         <label>
-            <input class="input" type="text" name="name" placeholder="Full Name">
+            <input v-model="name" class="input" type="text" name="name" placeholder="Full Name">
         </label>
          <label>
-            <input class="input" type="text" name="email" placeholder="Email Address">
+            <input v-model="email" class="input" type="text" name="email" placeholder="Email Address">
         </label>
         <label>
-            <textarea class="input textarea" name="message" placeholder="messages"/>
+            <textarea v-model="message" class="input textarea" name="message" placeholder="messages"/>
         </label>
-        <HrefBtn text="Send"/>
+        <HrefBtn text="Send" @send="send"/>
         </form>
       </div>
       <div class="col-xs-12 col-sm-6">
@@ -34,6 +31,14 @@
                    <h2 v-scroll-to="'#Feature'">{{item.title}}</h2>
                </div>
            </div>
+            <div class="col-xs-12 col-sm-6 t-center">
+               <h1>Fllow Us</h1>
+               <div class="social-icon-box ">
+                <a href="https://www.facebook.com/leyutechs/?view_public_for=340973034013018"><img class="social-icon" src="https://img.icons8.com/android/48/000000/facebook-new.png"/></a>
+                <a href="https://lin.ee/YNwofCH"><img class="social-icon line" src="https://img.icons8.com/ios-glyphs/30/000000/line-me.png"/></a>
+                <!-- <a href=""><img class="social-icon" src="https://img.icons8.com/ios-filled/50/000000/google-logo.png"/></a> -->
+               </div>
+           </div>
            <div class="col-xs-12 copyright">
            © 2021. All Rights Reserved.
            </div>
@@ -48,12 +53,30 @@ import HrefBtn from './HrefBtn.vue'
 export default {
   name: 'Contact',
   components: { HrefBtn },
+  data () {
+    return {
+      name: '',
+      email: '',
+      message: ''
+    }
+  },
   computed: {
     meta () {
       return this.$t('News')
     },
     Header () {
       return this.$t('Header')
+    }
+  },
+  methods: {
+    send () {
+      this.axios.post('https://formspree.io/f/mqkgonnp', {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      }).then((response) => {
+        if (response.data.ok) alert(this.$t('thx'))
+      }).catch((error) => { console.error(error) })
     }
   }
 }
@@ -94,6 +117,9 @@ export default {
         bottom: 0;
         text-align: center;
    }
+   .social-icon-box { display: inline-block;}
+   .social-icon { width: 50px;}
+   .line { width: 60px; top: 5px; position: relative;}
 }
 @media screen and (max-width: 768px) {
     #Contact {

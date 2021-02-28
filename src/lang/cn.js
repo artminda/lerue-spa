@@ -55,5 +55,6 @@ export default {
       { title: 'Ai數據搜集', des: '對機台擷取螢幕訊息並轉成可編輯且可搜尋的資料。彈性混合雲配置，用多少算多少。同時監控多台設備，大幅度增加生產效率。', url: 'http://leyutechs.com/doc/space-ocr.pdf' },
       { title: '系統串接整合', des: '對客戶既有服務做軟體串接，整合所有服務於一個控制平台，做到規模化管理', desList: ['手機', '網頁', 'Line', '無人機'], url: 'http://leyutechs.com/doc/connect.pdf' }
     ]
-  }
+  },
+  thx: '謝謝您的來信'
 }

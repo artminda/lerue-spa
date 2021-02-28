@@ -1,5 +1,10 @@
 <template>
-     <a :href="herf"><div class="b-btn">{{text}} <span class="i">></span></div></a>
+     <div v-if="text === 'Send'">
+         <div @click="handleSend" class="b-btn">{{text}} <span class="i">></span></div>
+    </div>
+     <a v-else :href="herf">
+         <div class="b-btn">{{text}} <span class="i">></span></div>
+    </a>
 </template>
 
 <script>
@@ -8,6 +13,11 @@ export default {
   props: {
     text: String,
     herf: String
+  },
+  methods: {
+    handleSend () {
+      this.$emit('send')
+    }
   }
 }
 </script>
