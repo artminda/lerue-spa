@@ -36,7 +36,7 @@
                <div class="social-icon-box">
                 <a href="https://www.facebook.com/leyutechs/?view_public_for=340973034013018"><img class="social-icon" src="https://img.icons8.com/android/48/000000/facebook-new.png"/></a>
                 <a href="https://lin.ee/YNwofCH"><img class="social-icon line" src="https://img.icons8.com/ios-glyphs/30/000000/line-me.png"/></a>
-                <a href="0930533350"><img src="https://img.icons8.com/ios-filled/50/000000/phone.png"/></a>
+                <a href="tel:0930533350"><img src="https://img.icons8.com/ios-filled/50/000000/phone.png"/></a>
                </div>
            </div>
            <div class="col-xs-12 copyright">
