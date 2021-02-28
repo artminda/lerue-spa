@@ -111,7 +111,6 @@ $black-bg: linear-gradient(-220deg, #3c3c3c, #c0c4cb);
         img {max-width: 150px;}
         }
        .active {
-           color: #01e6f8;
            background-color: #222;
            padding: 5px;
         }
