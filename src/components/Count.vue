@@ -56,7 +56,7 @@ export default {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       //   pc scroll hight || mobile scroll hight
       console.log(scrollTop)
-      if ((scrollTop >= 1024 && scrollTop <= 2585) || (scrollTop >= 3000 && scrollTop <= 4000)) {
+      if ((scrollTop >= 1024 && scrollTop <= 2400) || (scrollTop >= 2500 && scrollTop <= 3700)) {
         this.fadeInDown = true
       } else {
         this.fadeInDown = false
