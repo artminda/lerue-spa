@@ -21,5 +21,5 @@ yarn lint
 ```
 
 ### Customize configuration
-[DEMO](https://artminda.github.io/solution/#service)
+[DEMO](https://artminda.github.io/solution/#service) 
 See [Configuration Reference](https://cli.vuejs.org/config/).
