@@ -15,7 +15,7 @@
             v-scroll-to="navItems[navIndex]"
             @click="toggle(navItemsAct[navIndex])"
             class="hidden-xs"
-            :class="{active:select===navItemsAct[navIndex]}">{{item}}</a>
+            :class="{active:(select===navItemsAct[navIndex]) && homeHeader}">{{item}}</a>
 
        <switchBtn class="hidden-xs" :homeHeader="homeHeader" />
     </nav>
@@ -72,6 +72,7 @@ export default {
         this.homeHeader = true
       } else {
         this.homeHeader = false
+        this.select = ''
       }
     }
   },
