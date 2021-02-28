@@ -10,7 +10,7 @@
           <p>
            {{meta.des}}
           </p>
-          <HrefBtn text="CONTACT US" />
+          <div v-scroll-to="'#Contact'"><HrefBtn text="CONTACT US" /></div>
         </div>
       </div>
        <div class="col-xs-12 col-sm-6 banner">

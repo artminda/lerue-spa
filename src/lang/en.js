@@ -48,7 +48,7 @@ export default {
     ]
   },
   News: {
-    title: 'Product/service',
+    title: 'Product/Service',
     cards: [
       { title: 'Customized website design', des: 'Customized specifications, pay as you call, search engine optimization, Ai huge amount of data analysis, high traffic, ensure high availability of the site', url: 'http://leyutechs.com/doc/web.pdf' },
       { title: 'Intelligent Monitoring', des: '24-hour security guard, character feature learning and judgment, alarm notification system (line, mail, telegram), automatic retention of problem images for analysis', desList: ['Face Recognition', 'Electronic Fencing', 'Water Level Analysis', 'Mask Recognition', 'Multiple AI recognition on demand'], url: 'http://leyutechs.com/doc/space-cam.pdf' },

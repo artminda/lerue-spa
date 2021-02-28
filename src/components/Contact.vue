@@ -31,12 +31,12 @@
                    <h2 v-scroll-to="'#Feature'">{{item.title}}</h2>
                </div>
            </div>
-            <div class="col-xs-12 t-center">
+            <div class="col-xs-12 t-center fllow">
                <h1>Fllow Us</h1>
-               <div class="social-icon-box ">
+               <div class="social-icon-box">
                 <a href="https://www.facebook.com/leyutechs/?view_public_for=340973034013018"><img class="social-icon" src="https://img.icons8.com/android/48/000000/facebook-new.png"/></a>
                 <a href="https://lin.ee/YNwofCH"><img class="social-icon line" src="https://img.icons8.com/ios-glyphs/30/000000/line-me.png"/></a>
-                <!-- <a href=""><img class="social-icon" src="https://img.icons8.com/ios-filled/50/000000/google-logo.png"/></a> -->
+                <a href="0930533350"><img src="https://img.icons8.com/ios-filled/50/000000/phone.png"/></a>
                </div>
            </div>
            <div class="col-xs-12 copyright">
@@ -112,14 +112,15 @@ export default {
         }
 
    }
+   .fllow {display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 40px;}
    .copyright {
         position: absolute;
         bottom: 0;
         text-align: center;
    }
-   .social-icon-box { display: inline-block;}
-   .social-icon { width: 50px;}
-   .line { width: 60px; top: 5px; position: relative;}
+   .social-icon-box { display: inline-flex; background-color: #fff; width: 100%; padding: 10px 0; justify-content: space-around; align-items: center;}
+   .social-icon { width: 50px; filter:grayscale(80%);}
+   .line { width: 60px; position: relative;}
 }
 @media screen and (max-width: 768px) {
     #Contact {
@@ -129,6 +130,7 @@ export default {
         .form {
             padding-bottom: 60px;
         }
+       .fllow {padding: 0;}
        .copyright {
         bottom: -60px;
         padding: 0;
