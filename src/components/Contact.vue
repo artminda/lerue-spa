@@ -31,7 +31,7 @@
                    <h2 v-scroll-to="'#Feature'">{{item.title}}</h2>
                </div>
            </div>
-            <div class="col-xs-12 col-sm-6 t-center">
+            <div class="col-xs-12 t-center">
                <h1>Fllow Us</h1>
                <div class="social-icon-box ">
                 <a href="https://www.facebook.com/leyutechs/?view_public_for=340973034013018"><img class="social-icon" src="https://img.icons8.com/android/48/000000/facebook-new.png"/></a>
