@@ -147,6 +147,7 @@ export default {
         .card {
             margin-top: 40px;
             background-color: rgba(119, 119, 119, 0.454);
+            border-radius: 40px;
         h1 { color: #fff; }
         .absolute-bottom {
             margin: 0 auto;

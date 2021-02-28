@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 #Contact {
-    margin: 100px auto 150px auto;
+    margin: 150px auto 150px auto;
     h1 {
       padding: 0px 20px 20px;
     }
@@ -75,16 +75,17 @@ export default {
             background-color: white;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             border-radius: 50px;
-            max-width: 450px;
             width: 100%;
             height: 60px;
             border: none;
             margin-bottom: 30px;
-            padding-left: 30px;
+            padding: 0 30px;
             color: #000;
         }
         .textarea {
             height: 200px;
+            padding: 30px;
+            max-width: 100%;
         }
 
    }
@@ -103,7 +104,8 @@ export default {
             padding-bottom: 60px;
         }
        .copyright {
-        bottom: -30px;
+        bottom: -60px;
+        padding: 0;
         color: #ccc;
      }
   }

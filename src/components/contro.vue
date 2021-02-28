@@ -32,7 +32,7 @@ export default {
   name: 'contro',
   data () {
     return {
-      switch_way: Cookies.get('language')
+      switch_way: Cookies.get('language') || 'CN'
     }
   },
   props: {

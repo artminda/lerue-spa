@@ -20,11 +20,13 @@
             </image>
            </svg>
          </div>
+         <div class="count-box">
         <div v-if="fadeInDown" class="count">
           <div v-for="(n , i) in meta.numbers" :key="i" class="c-box">
            <countTo :startVal='startVal' :endVal='n.num' :duration='1500' class="num"/>
            <h3>{{n.des}}</h3>
           </div>
+        </div>
         </div>
         <div style="clear:both"></div>
       </div>
@@ -53,8 +55,8 @@ export default {
     handleScroll () {
       const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
       //   pc scroll hight || mobile scroll hight
-      //   console.log(scrollTop)
-      if ((scrollTop >= 1068 && scrollTop <= 2518) || (scrollTop >= 2581 && scrollTop <= 3399)) {
+      console.log(scrollTop)
+      if ((scrollTop >= 1024 && scrollTop <= 2585) || (scrollTop >= 2581 && scrollTop <= 3399)) {
         this.fadeInDown = true
       } else {
         this.fadeInDown = false
@@ -79,54 +81,61 @@ export default {
 #Count {
     margin: 16vh auto 8vh auto;
     .bg {
-        // position: absolute;
+        position: absolute;
         width: 100%;
     }
-    .count {
+    .count-box {
+        height: 296px;
         position: relative;
         z-index: 2;
-        display: inline-flex;
-        justify-content: space-between;
-        top: -50%;
-        width: 100%;
-        padding: 0 110px;
-        .c-box{
-          text-align: center;
-           .num {
-                color: #fff;
-                font-size: 48px;
-                font-weight: 500;
-                line-height: 1.2;
+        display: flex;
+        align-items: center;
+        .count {
+            display: inline-flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 110px;
+            .c-box{
+                text-align: center;
+                .num {
+                        color: #fff;
+                        font-size: 48px;
+                        font-weight: 500;
+                        line-height: 1.2;
+                    }
+                h3 {
+                    color: #fff;
+                }
             }
-           h3 {
-               color: #fff;
-           }
-      }
+        }
     }
 }
     @media (max-width: 768px) {
        #Count{
            margin: 63px 0;
-        .count {
-            top: 0;
-            display: flex;
-            flex-wrap: wrap;
-            background-color: #222;
-            border-radius: 10px;
-            padding: 20px 0 ;
-            .c-box {
-                text-align: center;
-                max-width: 50%;
-                padding: 10px 1px;
-            .num {
-                font-size: 38px;
+       .count-box {
+           height: 222px;
+           background-color: #222;
+            .count {
+                top: 0;
+                display: flex;
+                flex-wrap: wrap;
+                border-radius: 10px;
+                padding: 20px 0 ;
+                .c-box {
+                    text-align: center;
+                    max-width: 50%;
+                    padding: 10px 1px;
+                .num {
+                    font-size: 38px;
+                }
+                h3 {
+                    padding: 0 30px;
+                    word-break: break-word;
+                }
+                }
             }
-            h3 {
-                padding: 0 30px;
-                word-break: break-word;
-              }
-            }
-        }
+       }
     }
 }
 </style>

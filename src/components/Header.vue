@@ -3,7 +3,7 @@
     <nav class="navbar navbar-default" :class="{ scrolled: homeHeader }">
       <div class="container">
         <div class="navbar-header">
-          <a v-scroll-to="'#Banner'">
+          <a v-scroll-to="'#Banner'" @click="toggle">
             <img src="../assets/img/lerue-logo.png" class="logo" />
           </a>
           <div class="visible-xs">
