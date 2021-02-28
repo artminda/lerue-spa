@@ -73,6 +73,7 @@ export default {
       } else {
         this.homeHeader = false
         this.select = ''
+        if (this.flag === true) this.flag = false
       }
     }
   },
@@ -139,14 +140,26 @@ $black-bg: linear-gradient(-220deg, #3c3c3c, #c0c4cb);
     }
     .collapse {
         display: flex;
-        flex-wrap: wrap;
-        padding-top: 50px;
-        padding-bottom: 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 20px 0;
         width: 100%;
         background-color: #fff;
        a {
-           padding-bottom: 50px;
-       }
+           width: 50%;
+           padding: 10px 20px;
+           margin: 10px auto;
+        }
+        .active {
+           background-color: rgb(131, 131, 131);
+           border-radius: 5px;
+           font-size: 22px;
+           color: #fff;
+        }
+        .mt {
+            margin-top: 20px;
+        }
       }
     }
 }
