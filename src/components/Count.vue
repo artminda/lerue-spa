@@ -23,7 +23,7 @@
          <div class="count-box">
         <div v-if="fadeInDown" class="count">
           <div v-for="(n , i) in meta.numbers" :key="i" class="c-box">
-           <countTo :startVal='startVal' :endVal='n.num' :duration='1500' class="num"/>
+           <countTo :startVal='startVal' :endVal='n.num' :duration='1500' suffix='+' class="num"/>
            <h3>{{n.des}}</h3>
           </div>
         </div>

@@ -2,7 +2,8 @@
   <header class="header" id="header" :class="{ scrolled: homeHeader }">
     <nav class="navbar container">
           <a v-scroll-to="'#Banner'" @click="toggle('Home')">
-            <img src="../assets/img/lerue-logo.png" />
+            <img v-if="homeHeader" src="../assets/img/lerue-logo-w.png" />
+            <img v-else src="../assets/img/lerue-logo.png" />
           </a>
           <div class="visible-xs">
             <div @click="flag = !flag" class="menu-wrapper visible-xs">
